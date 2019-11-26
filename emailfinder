@@ -16,7 +16,7 @@ try:
     requi =requests.get(url)
 except:
     print("ocorreu um erro imprevisto!!")
-
+    exit()
 padrao =re.findall(r'[\w\.-]+@[\w-]+\.[\w\.-]+',requi.text)
 
 if padrao:
