@@ -14,8 +14,8 @@ print("\n\n\n")
 url =input("cole a url:")
 try:
     requi =requests.get(url)
-except:
-    print("ocorreu um erro imprevisto!!")
+except Exception as erro:
+    print("ocorreu um erro:",erro)
     exit()
 padrao =re.findall(r'[\w\.-]+@[\w-]+\.[\w\.-]+',requi.text)
 
